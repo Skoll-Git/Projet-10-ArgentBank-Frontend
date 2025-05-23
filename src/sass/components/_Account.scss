@@ -1,0 +1,45 @@
+.account { 
+    align-items: center;
+    background-color: rgb(61, 61, 61); 
+    border: 1px solid rgb(61, 61, 61);
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    text-align: left;
+    border-radius: 10px;
+    width: 82%;
+    @media (max-width: 720px) {flex-direction: column;}
+    .account-content-wrapper { width: 100%;
+                               .account-title { font-size: 1rem;
+                                                color: white;
+                                                font-weight: normal; 
+                                              }
+                               .account-amount { font-size: 2.5rem;
+                                                 color: white;
+                                                 margin-top: 0.5rem;
+                                                 font-weight: bold;
+                                               }
+                                .account-amount-description { font-size: 0.8rem;
+                                                              color: white;
+                                                              margin-top: 10px;
+                                                              font-weight: normal;
+                                                            } 
+                             }
+    .cta { 
+           @media (max-width: 720px) {width: 100%;}
+           .transaction-button { 
+                                 color: #fff;
+                                 display: block;
+                                 font-size: 2.5rem;
+                                 padding: 0.5rem;
+                                 width: 5rem;
+                                 position: absolute;
+                                 left: 90%;
+                                 top: 50%;
+                                 transform: translateY(-50%);
+                                 @media (max-width: 720px) {width : 100%;}
+                               }   
+         } 
+  }
