@@ -16,10 +16,10 @@ function UserProfile () {
             const userData = async () => {
                 try {
                     const response = await fetch('http://localhost:3001/api/v1/user/profile', {
-                        method: 'PUT',
+                        method: 'GET', 
                         headers: {
                             'Content-Type': 'application/json',
-                            'Authorization': `Bearer ${token}`, // Ajoute le token dans les en-têtes pour l'authentification
+                            'Authorization': `Bearer ${token}`,
                         },
                     });
                     if (response.ok) {
@@ -31,7 +31,7 @@ function UserProfile () {
                             email: data.body.email,
                             firstname: data.body.firstName,
                             lastname: data.body.lastName,
-                            username: data.body.userName,
+                            username: data.body.userName, 
                         };
                         dispatch(userProfile(userData)); // Met à jour les données utilisateur dans Redux
                     } else {
